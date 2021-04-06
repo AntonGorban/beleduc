@@ -1,0 +1,7 @@
+# npm & bower
+node_modules
+bower_components
+package-lock.json
+
+# IDE
+.vscode

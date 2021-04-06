@@ -1,0 +1,29 @@
+{
+  "name": "site",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "overrides": {
+    "jquery": {
+      "main": [
+        "./dist/jquery.min.js"
+      ]
+    },
+    "normalize.css": {
+      "main": [
+        "./normalize.css"
+      ]
+    }
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "normalize.css": "^8.0.1"
+  }
+}
