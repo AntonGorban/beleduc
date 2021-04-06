@@ -1,0 +1,32 @@
+-var title = "Главная | beleduc"
+-var description = "Настенные и напольные гировые элементы"
+-var keywords = ""
+-var og_img = "img/og-img.png"
+-var url = "https://antongorban.github.io/beleduc/"
+
+doctype html
+html(lang="ru")
+	head
+		//- About document
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+		meta(name="description" content=description)
+		meta(name="keywords" content=keywords)
+		title= title
+		//- Icons
+		link(rel="icon" href="img/ico.ico")
+		link(rel="shortcut icon" href="img/ico.ico")
+		//- OG
+		meta(property="og:title" content=title)
+		meta(property="og:type" content="website")
+		meta(property="og:image" content=og_img)
+		meta(property="og:url" content=url)
+		meta(property="og:description" content=description)
+		//- Fonts
+		link(rel="preconnect" href="https://fonts.gstatic.com")
+		link(href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700;800;900&display=swap" rel="stylesheet")
+		//- Styles
+		link(rel="stylesheet" href="css/main.css")
+	body
+
+		script(src="js/main.js")
