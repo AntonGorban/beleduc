@@ -1,0 +1,392 @@
+// Vars
+$white: #fff;
+$dark-white: #f1f2f6;
+
+$black: #000;
+$light-black: #181818;
+$grey: #3b484a;
+
+$yellow: #ffdd00;
+$yellow-2: #ffce1c;
+$dark-yellow: #c78014;
+$light-yellow: #fef2c9;
+
+$blue: #127cf8;
+
+
+
+// General
+
+body {
+	background: $dark-white;
+}
+
+* {
+	font-family: 'Roboto Slab', serif;
+	font-size: 14px;
+}
+
+a {
+	text-decoration: none;
+}
+
+div,
+p,
+ul,
+li,
+section,
+header,
+footer,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.mark {
+	color: $yellow;
+	font-weight: 700;
+}
+
+.wavy {
+	text-decoration: underline $yellow wavy 2px;
+}
+
+.button {
+	background: $yellow;
+	color: $yellow-2;
+	font-size: 13px;
+	font-weight: 700;
+	padding: 17px 54px;
+	border-radius: 80px;
+	box-shadow: 0 0 15px $yellow;
+}
+
+// Header
+
+header {
+	background: $dark-white url('../img/first-screen/Фон с левой частью.png') no-repeat center bottom / cover;
+	padding: 35px 0;
+	position: relative;
+
+	&:after,
+	&:before {
+		display: block;
+		position: absolute;
+		content: '';
+		width: 1px;
+		height: 70px;
+		background: $blue;
+		bottom: 30px;
+		left: 50%;
+	}
+
+	&:before {
+		height: 30px;
+		margin-left: -7px;
+		animation: 1.5s ease-in-out infinite alternate moving;
+	}
+
+	&:after {
+		height: 70px;
+		margin-left: 7px;
+		margin-bottom: 15px;
+		animation: 1.5s ease-in-out .75s infinite alternate-reverse moving;
+	}
+
+	@keyframes moving {
+		0% {
+			transform: translateY(-7px)
+		}
+
+		100% {
+			transform: translateY(7px)
+		}
+	}
+
+	#hat {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+
+		.header__logo {
+			color: $white;
+			font-weight: 500;
+			font-size: 12px;
+			text-align: center;
+
+			p {
+				margin-top: 5px;
+			}
+		}
+
+		.header__nav {
+			display: flex;
+			flex-direction: column;
+
+			.nav__contacts {
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+
+				.contacts__phone {
+					background: url('../img/first-screen/phone.svg') no-repeat left center;
+					font-size: 16px;
+					font-weight: 900;
+				}
+
+				.contacts__address {
+					background: url('../img/first-screen/point.svg') no-repeat left center;
+					font-size: 13px;
+					font-weight: 500;
+
+					span:after {
+						display: inline;
+						content: ' ';
+					}
+				}
+
+				.contacts__call {
+					font-weight: 700;
+				}
+
+				a {
+					color: $white;
+					padding-left: 30px;
+					margin-right: 37px;
+				}
+
+				a:last-child {
+					margin-right: 0;
+				}
+			}
+
+			nav {
+				.nav {
+					display: flex;
+					margin-top: 20px;
+					justify-content: flex-end;
+
+
+					.nav__item {
+						display: block;
+						padding-right: 40px;
+						margin-right: 20px;
+						background: url('../img/first-screen/nav-wavy.svg') no-repeat right center;
+
+						.nav__link {
+							color: $white;
+						}
+
+						&:last-child {
+							margin-right: 0;
+							padding-right: 0;
+							background: none;
+						}
+
+						&.active {
+							a {
+								color: $yellow;
+								font-weight: 700;
+							}
+
+							&:after {
+								display: block;
+								content: '';
+								height: 7px;
+								width: 106%;
+								transform: translateX(-2%);
+								background: url('../img/underline.png') repeat-x center bottom / contain;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.header__content {
+		margin: 0 auto;
+		margin-top: 100px;
+		width: 85%;
+
+		margin-bottom: 90px;
+
+		.header__text {
+			width: 50%;
+
+			h1 {
+				margin: 0;
+				font-size: 34px;
+				font-weight: 900;
+				color: $white;
+
+				span {
+					font-size: 34px;
+					font-weight: 900;
+				}
+			}
+
+			.header__offer {
+				display: flex;
+				align-items: center;
+				margin-top: 27px;
+				margin-bottom: 35px;
+
+				&:before {
+					content: "!";
+					display: block;
+					font-size: 78px;
+					line-height: 78px;
+					font-weight: 900;
+					color: $yellow;
+					margin-right: 15px;
+				}
+
+				.offer__wrap {
+
+					font-size: 16px;
+					font-weight: 700;
+					color: $white;
+
+					span {
+						font-size: 16px;
+						font-weight: 700;
+
+						&:before,
+						&:after {
+							display: inline;
+							content: ' ';
+						}
+					}
+
+					.offer__intro {
+						font-weight: 900;
+						font-size: 22px;
+						margin: 0;
+					}
+				}
+			}
+
+			.header__button {
+				margin-top: 40px;
+			}
+		}
+	}
+
+	.advantage__wrap {
+		display: flex;
+		width: 55%;
+		margin: 0 auto;
+		margin-bottom: 30px;
+
+		.header__advantage {
+			background: $white;
+			border-radius: 30px;
+
+			.advantage__content {
+				background: $white;
+				padding: 40px 20px;
+				margin: 30px;
+				border-radius: 30px;
+				text-align: center;
+				display: flex;
+				justify-content: space-evenly;
+				align-items: center;
+				flex-direction: column;
+				box-shadow: 0 0 35px rgba(0, 0, 0, .15);
+
+				.advantage__intro {
+					font-size: 50px;
+					font-weight: 900;
+					margin: 0;
+				}
+
+				.advantage__outro {
+					font-size: 20px;
+					font-weight: 700;
+				}
+
+			}
+
+		}
+	}
+
+	.header__paralax * {
+		position: absolute;
+		display: none;
+	}
+
+	.header__paralax {
+		.square {
+			box-sizing: border-box;
+			width: 100px;
+			height: 100px;
+			border: 20px solid $yellow;
+			border-radius: 15px;
+			position: absolute;
+			// top: 0;
+			// left: 0;
+			filter: blur(1px);
+		}
+
+		#square-1 {
+			display: block;
+			transform: scale(.8) rotate(30deg);
+			bottom: 160px;
+			right: 40px;
+		}
+
+		#square-2 {
+			filter: blur(15px);
+			opacity: .6;
+			display: block;
+			transform: scale(.7) rotate(30deg);
+			top: 53%;
+			left: 27%;
+		}
+
+		#triangle-1 {
+			display: block;
+			top: 20%;
+			left: 45%;
+		}
+
+		#triangle-2 {
+			display: block;
+			top: 15%;
+			right: 5%;
+		}
+
+		#wavy {
+			display: block;
+			top: 25%;
+			right: 3%;
+		}
+
+		.circle {
+			box-sizing: border-box;
+			width: 100px;
+			height: 100px;
+			border: 20px solid $white;
+			border-radius: 50px;
+			position: absolute;
+			filter: blur(1px);
+		}
+
+		#circle-2 {
+			filter: blur(15px);
+			opacity: .7;
+			display: block;
+			transform: scale(.5);
+			top: 22%;
+			right: 11%;
+		}
+
+		#circle-1 {
+			display: block;
+			transform: scale(.6);
+			top: 22%;
+			left: 1%;
+		}
+	}
+}

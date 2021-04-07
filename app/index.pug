@@ -1,0 +1,89 @@
+-var title = "Главная | beleduc"
+-var description = "Настенные и напольные гировые элементы"
+-var keywords = ""
+-var og_img = "img/og-img.png"
+-var url = "https://antongorban.github.io/beleduc/"
+
+doctype html
+html(lang="ru")
+	head
+		//- About document
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+		meta(name="description" content=description)
+		meta(name="keywords" content=keywords)
+		title= title
+		//- Icons
+		link(rel="icon" href="img/ico.ico")
+		link(rel="shortcut icon" href="img/ico.ico")
+		//- OG
+		meta(property="og:title" content=title)
+		meta(property="og:type" content="website")
+		meta(property="og:image" content=og_img)
+		meta(property="og:url" content=url)
+		meta(property="og:description" content=description)
+		//- Fonts
+		link(rel="preconnect" href="https://fonts.gstatic.com")
+		link(href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700;800;900&display=swap" rel="stylesheet")
+		//- Styles
+		link(rel="stylesheet" href="css/main.css")
+	body
+		header#header
+			#hat
+				a(href="#").logo.header__logo
+					img.logo.logo__igm(src="/img/first-screen/logo.png")
+					p.logo__text Настенные игровые
+						<br/ >панели и модули
+				.header__nav
+					.nav__contacts
+						a.contacts__phone(href="tel:+74952226049") +7 (495) 222-60-49
+						a.contacts__address(href="#")
+							span.mark г.Москва,
+							|ул.Складочная,
+							<br/> д.1 стр.5 оф.3160
+						a.contacts__call.wavy(href="#")
+							span.mark З
+							|аказать звонок
+					nav
+						ul.nav
+							li.nav__item.active
+								a.nav__link(href="#header") Главная
+							li.nav__item
+								a.nav__link(href="#") Каталог игровых панелей
+							li.nav__item
+								a.nav__link(href="#") Видеоролики
+							li.nav__item
+								a.nav__link(href="#") Для кого?
+							li.nav__item
+								a.nav__link(href="#") Сферы образования
+							li.nav__item
+								a.nav__link(href="#") Отзывы
+			.header__content
+				.header__text
+					h1
+						span.mark Н
+						|астенные инапольные
+						<br/> игровые элементы
+					.header__offer
+						.offer__wrap
+							h2.offer__intro.mark Успей купить до подорожания!
+							|Успей купить прямо сейчас
+							<br/> и получи
+							span.mark.wavy максимальную
+							|выгоду
+					a.header__button.button Отправить заявку
+			.advantage__wrap
+				.header__advantage
+					.advantage__content
+						img(src="img/first-screen/advantage.svg")
+						h3.advantage__intro 65 лет
+						.advantage__outro на рынке
+			.header__paralax
+				.square#square-1
+				.square#square-2
+				img.triangle#triangle-1(src="img/first-screen/triangle.svg")
+				img.triangle#triangle-2(src="img/first-screen/triangle1.svg")
+				img#wavy(src="img/first-screen/wavy.svg")
+				.circle#circle-1
+				.circle#circle-2
+		script(src="js/main.js")
